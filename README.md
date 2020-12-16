@@ -1,4 +1,4 @@
-# “GlosysIC Framework
+# GlosysIC Framework
 <p align="center">
   <img src="images/MIKE_GlosysIC_Architecture.jpg">
 </p>
@@ -50,6 +50,20 @@ Our model's scores on various evaluation metrics. <br>
 Model | BLEU-1 | BLEU-2 | BLEU-3 | BLEU-4 | CIDEr | ROUGE-L | METEOR 
 :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: 
 GlosysIC | 72.5 | 53.4 | 38.7 | 28.15 | 94.0 | 54.5 | 25.8 
+<p align="center">
+
+<table>
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+</table>
+</p>
+
 
 ## Final Note
 The generated captions capture intricate details of the image are well generated. <br>
