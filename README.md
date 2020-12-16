@@ -1,10 +1,12 @@
 # GlosysIC Framework
-<p align="center">
-  <img src="images/MIKE_GlosysIC_Architecture.jpg">
-</p>
+
 
 This repository is our implementation of our MIKE 2019 paper: <br>
 ### GlosysIC Framework: Transformer for Image Captioning with Sequential Attention MIKE 2019
+
+<p align="center">
+  <img src="images/MIKE_GlosysIC_Architecture.jpg">
+</p>
 
 ## Abstract
 Over the past decade, the field of Image captioning has witnessed a lot of intensive research interests. This paper proposes
@@ -67,7 +69,7 @@ python caption.py --image "image.jpg"
   </tr>
 </table>
 <p align="center">
-<b>Our model's scores on various evaluation metrics. </b><br>
+<em>Our model's scores on various evaluation metrics. </em><br>
 </p>
 
 ## Final Note
