@@ -42,12 +42,12 @@ python caption.py --image "image.jpg"
 ## Results
 <p align="center">
   <img src="images/Evaluation_GlosysIC.jpg">
-  Green: Generated Captions
-  Red: Ground Truth Captions
+  <b> Green: Generated Captions <br>
+  Red: Ground Truth Captions</b>
 </p>
 
 
-
+## Evaluation
 <table align='center'>
   <tr>
     <th>Model</th>
@@ -71,7 +71,7 @@ python caption.py --image "image.jpg"
   </tr>
 </table>
 <p align="center">
-Our model's scores on various evaluation metrics. <br>
+<b>Our model's scores on various evaluation metrics. </b><br>
 </p>
 
 ## Final Note
