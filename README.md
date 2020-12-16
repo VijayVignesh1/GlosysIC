@@ -43,8 +43,8 @@ python caption.py --image "image.jpg"
 <p align="center">
   <img src="images/Evaluation_GlosysIC.jpg">
 </p>
-  <style color="green"> Green: Generated Captions </style><br>
-  <style color="red">Red: Ground Truth Captions </style></b>
+  <span style="color:#FF0000"> Green: Generated Captions </span><br>
+  <span style="color:#FF0000">Red: Ground Truth Captions </span></b>
 
 
 ## Evaluation
