@@ -1,5 +1,5 @@
 # GlosysIC Framework
-<p align="center">
+<p align="right">
   <img src="images/MIKE_GlosysIC_Architecture.jpg">
 </p>
 
@@ -20,7 +20,7 @@ significantly outperforms the previous state-of-the-art models.
 
 ## Architecture
 <p align="center">
-  <img src="images/GlosysIC_Transformer_Architecture.jpg">
+  <img width=240 height=480 src="images/GlosysIC_Transformer_Architecture.jpg">
 </p>
 
 ## Requirements
@@ -50,9 +50,9 @@ Our model's scores on various evaluation metrics. <br>
 Model | BLEU-1 | BLEU-2 | BLEU-3 | BLEU-4 | CIDEr | ROUGE-L | METEOR 
 :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: 
 GlosysIC | 72.5 | 53.4 | 38.7 | 28.15 | 94.0 | 54.5 | 25.8 
-<p align="center">
 
-<table>
+
+<table align='center'>
   <tr>
     <th>Month</th>
     <th>Savings</th>
@@ -62,7 +62,6 @@ GlosysIC | 72.5 | 53.4 | 38.7 | 28.15 | 94.0 | 54.5 | 25.8
     <td>$100</td>
   </tr>
 </table>
-</p>
 
 
 ## Final Note
