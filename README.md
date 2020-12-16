@@ -3,7 +3,7 @@
   <img src="images/MIKE_GlosysIC_Architecture.jpg">
 </p>
 
-<b style='color:red'>red words</b>
+<h3 style="color:#ff0000">Danger</h3>
 
 This repository is our implementation of our MIKE 2019 paper: <br>
 ### GlosysIC Framework: Transformer for Image Captioning with Sequential Attention MIKE 2019
