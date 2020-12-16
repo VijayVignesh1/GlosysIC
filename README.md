@@ -16,3 +16,34 @@ of PyTorch Deep Learning library. Experimental results illustrate that GlosysIC
 significantly outperforms the previous state-of-the-art models.
 
 
+## Requirements
+* torch>=1.2.0 <br>
+* torchvision>=0.3.0 <br>
+
+## Steps to run
+1. Download the datasets (Preprocessed COCO dataset) for training from <here> and place them in the $(Root)/datasets directory. <br>
+2. (Optional) Edit the training parameters from base_model.py.
+3. To start the training process, run:
+```.bash
+python train.py
+```
+4. To generate caption on custom test image, run:
+```.bash
+python caption.py --image "image.jpg"
+```
+
+## Results
+Below are the captions generated on test various evaluation images along with the five found truth sentences. <br>
+<img>
+Our model's scores on various evaluation metrics. <br>
+<table>
+
+## Final Note
+The generated captions capture intricate details of the image are well generated. <br>
+Go ahead..pull it, train it and have fun. And don't forget to :star:<b><i>star</i></b>:star: the repo, if you like it. :smile:
+
+-------------------------------------
+<p align="center">
+:star2: Happiness should be a function without any parameters :star2: <br> <br>
+<b>Happy Coding</b> :exclamation: :exclamation:
+</p>
