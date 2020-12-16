@@ -1,5 +1,5 @@
 # GlosysIC Framework
-<p align="right">
+<p align="center">
   <img src="images/MIKE_GlosysIC_Architecture.jpg">
 </p>
 
@@ -20,7 +20,7 @@ significantly outperforms the previous state-of-the-art models.
 
 ## Architecture
 <p align="center">
-  <img width=240 height=480 src="images/GlosysIC_Transformer_Architecture.jpg">
+  <img width=420 height=480 src="images/GlosysIC_Transformer_Architecture.jpg">
 </p>
 
 ## Requirements
@@ -40,29 +40,39 @@ python caption.py --image "image.jpg"
 ```
 
 ## Results
-Below are the captions generated on test various evaluation images along with the five found truth sentences. <br>
 <p align="center">
   <img src="images/Evaluation_GlosysIC.jpg">
+  Green: Generated Captions
+  Red: Ground Truth Captions
 </p>
 
-Our model's scores on various evaluation metrics. <br>
-
-Model | BLEU-1 | BLEU-2 | BLEU-3 | BLEU-4 | CIDEr | ROUGE-L | METEOR 
-:---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: 
-GlosysIC | 72.5 | 53.4 | 38.7 | 28.15 | 94.0 | 54.5 | 25.8 
 
 
 <table align='center'>
   <tr>
-    <th>Month</th>
-    <th>Savings</th>
+    <th>Model</th>
+    <th>BLEU-1</th>
+    <th>BLEU-2</th>
+    <th>BLEU-3</th>
+    <th>BLEU-4</th>
+    <th>CIDEr</th>
+    <th>ROUGE-L</th>
+    <th>METEOR</th>    
   </tr>
   <tr>
-    <td>January</td>
-    <td>$100</td>
+    <td>GlosysIC</td>
+    <td>72.5</td>
+    <td>53.4</td>
+    <td>38.7</td>
+    <td>28.15</td>
+    <td>94.0</td>
+    <td>54.0</td>
+    <td>25.8</td>    
   </tr>
 </table>
-
+<p align="center">
+Our model's scores on various evaluation metrics. <br>
+</p>
 
 ## Final Note
 The generated captions capture intricate details of the image are well generated. <br>
