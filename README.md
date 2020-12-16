@@ -16,7 +16,7 @@ of PyTorch Deep Learning library. Experimental results illustrate that GlosysIC
 significantly outperforms the previous state-of-the-art models.
 
 ## Architecture
-![](images/GlosysIC_Transformer_Architecture.jpg)<br>
+![](images/GlosysIC_Transformer_Architecture .jpg)<br>
 
 ## Requirements
 * torch>=1.2.0 <br>
