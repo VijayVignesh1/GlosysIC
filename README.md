@@ -1,8 +1,10 @@
 # “GlosysIC Framework
+<center>
 ![](images/MIKE_GlosysIC_Architecture.jpg)<br>
+</center>
+This repository is our implementation of our MIKE 2019 paper: <br>
+### GlosysIC Framework: Transformer for Image Captioning with Sequential Attention MIKE 2019
 
-This repository is our implementation of our MIKE 2019 paper. <br>
-* GlosysIC Framework: Transformer for Image Captioning with Sequential Attention MIKE 2019 <br>
 ## Abstract
 Over the past decade, the field of Image captioning has witnessed a lot AQ1
 of intensive research interests. This paper proposes “GlosysIC Framework: Transformer for Image Captioning with Sequential Attention” to build a novel framework that harnesses the combination of Convolutional Neural Network (CNN) to
@@ -16,7 +18,9 @@ of PyTorch Deep Learning library. Experimental results illustrate that GlosysIC
 significantly outperforms the previous state-of-the-art models.
 
 ## Architecture
+<center>
 ![](images/GlosysIC_Transformer_Architecture.jpg)<br>
+</center>
 
 ## Requirements
 * torch>=1.2.0 <br>
@@ -36,12 +40,15 @@ python caption.py --image "image.jpg"
 
 ## Results
 Below are the captions generated on test various evaluation images along with the five found truth sentences. <br>
+<center>
 ![](images/Evaluation_GlosysIC.jpg)<br>
+</center>
 Our model's scores on various evaluation metrics. <br>
+<center>
 Model | BLEU-1 | BLEU-2 | BLEU-3 | BLEU-4 | CIDEr | ROUGE-L | METEOR 
---- | --- | --- | --- |--- |--- |--- |--- 
+:---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: 
 GlosysIC | 72.5 | 53.4 | 38.7 | 28.15 | 94.0 | 54.5 | 25.8 
-
+</center>
 ## Final Note
 The generated captions capture intricate details of the image are well generated. <br>
 Go ahead..pull it, train it and have fun. And don't forget to :star:<b><i>star</i></b>:star: the repo, if you like it. :smile:
