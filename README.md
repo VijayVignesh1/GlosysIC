@@ -28,7 +28,7 @@ Experimental results illustrate that GlosysIC significantly outperforms the prev
 * torchvision>=0.3.0 <br>
 
 ## Steps to run
-1. Download the datasets (Preprocessed COCO dataset) for training from [here] (https://drive.google.com/drive/u/1/folders/1Aey60cZR_mBrVfBVOOSd-OFcR_FnToUB) and place them in the $(Root)/datasets directory. (The dataset given in the link is just a subset of the entire dataset. If you require the entire data, drop us a message and we'll provide them to you) <br>
+1. Download the datasets (Preprocessed COCO dataset) for training from [here](https://drive.google.com/drive/u/1/folders/1Aey60cZR_mBrVfBVOOSd-OFcR_FnToUB) and place them in the $(Root)/datasets directory. (The dataset given in the link is just a subset of the entire dataset. If you require the entire data, drop us a message and we'll provide them to you) <br>
 2. (Optional) Edit the training parameters from base_model.py.
 3. To start the training process, run:
 ```.bash
