@@ -16,14 +16,14 @@ of PyTorch Deep Learning library. Experimental results illustrate that GlosysIC
 significantly outperforms the previous state-of-the-art models.
 
 ## Architecture
-![](images/GlosysIC_Transformer_Architecture .jpg)<br>
+![](images/GlosysIC_Transformer_Architecture.jpg)<br>
 
 ## Requirements
 * torch>=1.2.0 <br>
 * torchvision>=0.3.0 <br>
 
 ## Steps to run
-1. Download the datasets (Preprocessed COCO dataset) for training from <here> and place them in the $(Root)/datasets directory. <br>
+1. Download the datasets (Preprocessed COCO dataset) for training from [here] (https://drive.google.com/drive/u/1/folders/1Aey60cZR_mBrVfBVOOSd-OFcR_FnToUB) and place them in the $(Root)/datasets directory. (The dataset given in the link is just a subset of the entire dataset. If you require the entire data, drop us a message and we'll provide them to you) <br>
 2. (Optional) Edit the training parameters from base_model.py.
 3. To start the training process, run:
 ```.bash
@@ -38,7 +38,9 @@ python caption.py --image "image.jpg"
 Below are the captions generated on test various evaluation images along with the five found truth sentences. <br>
 ![](images/Evaluation_GlosysIC.jpg)<br>
 Our model's scores on various evaluation metrics. <br>
-<table>
+Model | BLEU-1 | BLEU-2 | BLEU-3 | BLEU-4 | CIDEr | ROUGE-L | METEOR 
+--- | --- | --- | --- |--- |--- |--- |--- 
+GlosysIC | 72.5 | 53.4 | 38.7 | 28.15 | 94.0 | 54.5 | 25.8 
 
 ## Final Note
 The generated captions capture intricate details of the image are well generated. <br>
