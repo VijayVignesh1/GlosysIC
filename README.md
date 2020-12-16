@@ -3,8 +3,6 @@
   <img src="images/MIKE_GlosysIC_Architecture.jpg">
 </p>
 
-- ![#f03c15](https://imgrp2.xiaolee.net/i/aHR0cHM6Ly9wbGFjZWhvbGQuaXQvMTUvZjAzYzE1LzAwMDAwMD90ZXh0PSs=.jpg) `#f03c15`
-- ![#c5f015](https://imgrp2.xiaolee.net/i/aHR0cHM6Ly9wbGFjZWhvbGQuaXQvMTUvYzVmMDE1LzAwMDAwMD90ZXh0PSs=.jpg) `#c5f015`
 This repository is our implementation of our MIKE 2019 paper: <br>
 ### GlosysIC Framework: Transformer for Image Captioning with Sequential Attention MIKE 2019
 
@@ -44,6 +42,8 @@ python caption.py --image "image.jpg"
 ## Results
 <img align='center' src="images/Evaluation_GlosysIC.jpg">
 
+- ![#f03c15](https://imgrp2.xiaolee.net/i/aHR0cHM6Ly9wbGFjZWhvbGQuaXQvMTUvZjAzYzE1LzAwMDAwMD90ZXh0PSs=.jpg) `#f03c15`
+- ![#c5f015](https://imgrp2.xiaolee.net/i/aHR0cHM6Ly9wbGFjZWhvbGQuaXQvMTUvYzVmMDE1LzAwMDAwMD90ZXh0PSs=.jpg) `#c5f015`
 
 ## Evaluation
 <table align='center'>
