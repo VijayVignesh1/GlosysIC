@@ -3,10 +3,9 @@
   <img src="images/MIKE_GlosysIC_Architecture.jpg">
 </p>
 
-<div class="text-green mb-2 ml-4">
-  .text-green on white
+<div class="bg-green-light mb-2">
+  .text-gray-dark on .bg-green-light
 </div>
-
 This repository is our implementation of our MIKE 2019 paper: <br>
 ### GlosysIC Framework: Transformer for Image Captioning with Sequential Attention MIKE 2019
 
