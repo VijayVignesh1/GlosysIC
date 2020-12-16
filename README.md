@@ -3,9 +3,8 @@
   <img src="images/MIKE_GlosysIC_Architecture.jpg">
 </p>
 
-<div class="bg-green-light mb-2">
-  .text-gray-dark on .bg-green-light
-</div>
+- ![#f03c15](https://imgrp2.xiaolee.net/i/aHR0cHM6Ly9wbGFjZWhvbGQuaXQvMTUvZjAzYzE1LzAwMDAwMD90ZXh0PSs=.jpg) `#f03c15`
+- ![#c5f015](https://imgrp2.xiaolee.net/i/aHR0cHM6Ly9wbGFjZWhvbGQuaXQvMTUvYzVmMDE1LzAwMDAwMD90ZXh0PSs=.jpg) `#c5f015`
 This repository is our implementation of our MIKE 2019 paper: <br>
 ### GlosysIC Framework: Transformer for Image Captioning with Sequential Attention MIKE 2019
 
