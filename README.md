@@ -1,7 +1,8 @@
 # “GlosysIC Framework
 <p align="center">
-![](images/MIKE_GlosysIC_Architecture.jpg)<br>
+  <img src="images/MIKE_GlosysIC_Architecture.jpg">
 </p>
+
 This repository is our implementation of our MIKE 2019 paper: <br>
 ### GlosysIC Framework: Transformer for Image Captioning with Sequential Attention MIKE 2019
 
@@ -19,7 +20,7 @@ significantly outperforms the previous state-of-the-art models.
 
 ## Architecture
 <p align="center">
-![](images/GlosysIC_Transformer_Architecture.jpg)<br>
+  <img src="images/GlosysIC_Transformer_Architecture.jpg">
 </p>
 
 ## Requirements
@@ -41,14 +42,15 @@ python caption.py --image "image.jpg"
 ## Results
 Below are the captions generated on test various evaluation images along with the five found truth sentences. <br>
 <p align="center">
-![](images/Evaluation_GlosysIC.jpg)<br>
+  <img src="images/Evaluation_GlosysIC.jpg">
 </p>
+
 Our model's scores on various evaluation metrics. <br>
-<center>
+
 Model | BLEU-1 | BLEU-2 | BLEU-3 | BLEU-4 | CIDEr | ROUGE-L | METEOR 
 :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: 
 GlosysIC | 72.5 | 53.4 | 38.7 | 28.15 | 94.0 | 54.5 | 25.8 
-</center>
+
 ## Final Note
 The generated captions capture intricate details of the image are well generated. <br>
 Go ahead..pull it, train it and have fun. And don't forget to :star:<b><i>star</i></b>:star: the repo, if you like it. :smile:
