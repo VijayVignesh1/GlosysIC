@@ -1,5 +1,5 @@
 # “GlosysIC Framework
-<img>
+![](images/MIKE_GlosysIC_Architecture.jpg)<br>
 
 This repository is our implementation of our MIKE 2019 paper. <br>
 * GlosysIC Framework: Transformer for Image Captioning with Sequential Attention MIKE 2019 <br>
@@ -15,6 +15,8 @@ dataset using RTX 2060 GPU and V100 GPU from Google Cloud Platform in terms
 of PyTorch Deep Learning library. Experimental results illustrate that GlosysIC
 significantly outperforms the previous state-of-the-art models.
 
+## Architecture
+![](images/GlosysIC_Transformer_Architecture.jpg)<br>
 
 ## Requirements
 * torch>=1.2.0 <br>
@@ -34,7 +36,7 @@ python caption.py --image "image.jpg"
 
 ## Results
 Below are the captions generated on test various evaluation images along with the five found truth sentences. <br>
-<img>
+![](images/Evaluation_GlosysIC.jpg)<br>
 Our model's scores on various evaluation metrics. <br>
 <table>
 
