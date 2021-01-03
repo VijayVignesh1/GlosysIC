@@ -2,6 +2,8 @@
 
 
 This repository is our implementation of our MIKE 2019 paper: <br>
+[GlosysIC Framework: Transformer for Image Captioning with Sequential Attention](https://link.springer.com/chapter/10.1007%2F978-3-030-66187-8_31)
+
 ### GlosysIC Framework: Transformer for Image Captioning with Sequential Attention MIKE 2019
 
 <p align="center">
