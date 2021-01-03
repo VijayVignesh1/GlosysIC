@@ -20,7 +20,7 @@ for generating effective descriptions of images. The proposed system was exhaust
 captioning dataset using RTX 2060 GPU and V100 GPU from Google Cloud Platform in terms of PyTorch Deep Learning library.
 Experimental results illustrate that GlosysIC significantly outperforms the previous state-of-the-art models.
 
-## Architecture
+## Sequential Attention
 <p align="center">
   <img width=420 height=480 src="images/GlosysIC_Transformer_Architecture.jpg">
 </p>
