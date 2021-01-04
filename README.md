@@ -73,13 +73,3 @@ python caption.py --image "image.jpg"
 <p align="center">
 <em>Our model's scores on various evaluation metrics. </em><br>
 </p>
-
-## Final Note
-The generated captions capture intricate details of the image are well generated. <br>
-Go ahead..pull it, train it and have fun. And don't forget to :star:<b><i>star</i></b>:star: the repo, if you like it. :smile:
-
--------------------------------------
-<p align="center">
-:star2: Happiness should be a function without any parameters :star2: <br> <br>
-<b>Happy Coding</b> :exclamation: :exclamation:
-</p>
