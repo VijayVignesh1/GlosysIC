@@ -49,7 +49,6 @@ def caption_image_beam_search(encoder, decoder, image_path, word_map,adv_word_ma
     enc_image_size = encoder_out.size(1)
     encoder_out = encoder_out.view(1, 14, 14, 512)
 
-    print(encoder_out.shape)
     encoder_dim = encoder_out.size(3)
 
     # Flatten encoding
@@ -80,21 +79,14 @@ def caption_image_beam_search(encoder, decoder, image_path, word_map,adv_word_ma
 
     # s is a number less than or equal to k, because sequences are removed from this process once they hit <end>
     while True:
-        print("The EMbediings starting are", k_prev_words.shape)
-
         embeddings = decoder.embed(k_prev_words)  # (s, embed_dim)
-        # print("The EMbediings are", embeddings.shape)
         embeddings =  decoder.pe(embeddings)
-        # print("The Positional embeddings are", embeddings.shape)
         for i in range(6):
             embeddings = decoder.layers[i](embeddings, encoder_out, trg_mask = None)
         y = decoder.norm(embeddings)
-        # print("The Outputs are", y.shape)
         results = decoder.out(y)
-        # print("The Outputs are", results.shape)
 
-        #print("results is",F.softmax(results, dim=2), (F.softmax(results, dim=2)).shape)
-        #scores = torch.argmax(F.softmax(results, dim=2),dim=2)
+        scores = torch.argmax(F.softmax(results, dim=2),dim=2)
         scores=results.squeeze(1)
         
 
@@ -120,34 +112,27 @@ def caption_image_beam_search(encoder, decoder, image_path, word_map,adv_word_ma
         incomplete_inds = [ind for ind, next_word in enumerate(next_word_inds) if
                            next_word != word_map['<end>']]
         complete_inds = list(set(range(len(next_word_inds))) - set(incomplete_inds))
-        # print("The indices are after again", incomplete_inds)
 
         # Set aside complete sequences
         if len(complete_inds) > 0 or step==50:
             complete_seqs.extend(seqs[complete_inds].tolist())
             complete_seqs_scores.extend(top_k_scores[complete_inds])
         k -= len(complete_inds)  # reduce beam length accordingly
-        print("Sequence after is",seqs)
 
         # Proceed with incomplete sequences
         if k == 0:
             break
-        # print("The seqs are at the end", seqs.shape)
         seqs = seqs[incomplete_inds]
-        # print("The seqs are after the end", seqs.shape)
         # h = h[prev_word_inds[incomplete_inds]]
         # c = c[prev_word_inds[incomplete_inds]]
         encoder_out = encoder_out[prev_word_inds[incomplete_inds]]
-        # print("the top k scores",top_k_scores.shape)
         top_k_scores = top_k_scores[incomplete_inds].unsqueeze(1)
-        # print("the top k scores are",top_k_scores.shape)
         k_prev_words = next_word_inds[incomplete_inds].unsqueeze(1)
 
         # Break if things have been going on too long
         if step > 50:
             break
         step += 1
-        # print("The sequence is" , seqs)
 
     i = complete_seqs_scores.index(max(complete_seqs_scores))
     seq = complete_seqs[i]

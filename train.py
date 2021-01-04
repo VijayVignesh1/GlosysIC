@@ -199,7 +199,6 @@ def train(train_loader, encoder, decoder, criterion, encoder_optimizer, decoder_
 
         # Remove timesteps that we didn't decode at, or are pads
         # pack_padded_sequence is an easy trick to do this
-        # print("the score are shape",scores.shape ,decode_lengths.shape)
         scoresTemp = pack_padded_sequence(scores, decode_lengths, batch_first=True)
         scores=scoresTemp.data
         targetsTemp = pack_padded_sequence(targets, decode_lengths, batch_first=True)

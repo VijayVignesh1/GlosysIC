@@ -41,21 +41,14 @@ class Encoder(nn.Module):
             batch_size=out.size(0)
             out = out.view(batch_size, -1, 2048)
             out = self.encoder_trans(out)
-            #print(out.size())
             
             
             #### VGG ####
             out_vgg=self.vgg(images)
             out_vgg = self.adaptive_pool(out_vgg)
-            #print("asda")
-            #print(out_vgg.shape)
             out_vgg=out_vgg.permute(0,2,3,1)
             batch_size=out_vgg.size(0)
             out_vgg=out_vgg.view(batch_size,-1,512)
-            #print("vgg")
-            #print(out_vgg.shape)
             object_mean=torch.mean(torch.stack([out,out_vgg],dim=0).float(),dim=0)
-            #print(object_mean)
-            #print(out)
         return object_mean
 
