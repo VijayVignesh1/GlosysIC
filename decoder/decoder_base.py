@@ -1,9 +1,9 @@
 import torch
 import torch.nn as nn 
 import copy
-from decoder.attn.MultiHeadAttention import MultiHeadAttention
-from decoder.attn.PositionalEncoder import PositionalEncoder
-from decoder.attn.Embedder import Embedder
+from decoder.MultiHeadAttention import MultiHeadAttention
+from decoder.PositionalEncoder import PositionalEncoder
+from decoder.Embedder import Embedder
 from common.FeedForward import FeedForward
 from common.norm import Norm
 

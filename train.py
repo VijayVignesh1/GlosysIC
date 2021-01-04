@@ -8,7 +8,7 @@ from torch.autograd import Variable
 from torch.nn.utils.rnn import pack_padded_sequence
 
 from encoder.resnet.encoder import Encoder
-from decoder.attn.decoder import Decoder
+from decoder.decoder_base import Decoder
 from load_datasets import *
 
 from utils import *
@@ -16,7 +16,7 @@ from nltk.translate.bleu_score import SmoothingFunction
 from nltk.translate.bleu_score import corpus_bleu
 
 # Data parameters
-data_folder = 'D:\Vijay Code\Image Captioning\Show, Attend and tell'  # folder with data files saved by create_input_files.py
+data_folder = 'Image Captioning\Show, Attend and tell'  # folder with data files saved by create_input_files.py
 data_name = '_GLOSYS'  # base name shared by data files
 
 # Model parameters

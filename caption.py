@@ -13,6 +13,7 @@ from PIL import Image
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+data_folder = 'Image Captioning\Show, Attend and tell'  # folder with data files saved by create_input_files.py
 
 def caption_image_beam_search(encoder, decoder, image_path, word_map,adv_word_map, beam_size=3):
     """
@@ -190,7 +191,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # Load model
-    checkpoint = torch.load('D:\Vijay Code\Image Captioning\Image-Caption\BEST_checkpoint__GLOSYS.pth.tar')
+    checkpoint = torch.load(data_folder + 'BEST_checkpoint.pth')
     decoder = checkpoint['decoder']
     decoder = decoder.to(device)
     decoder.eval()
@@ -199,12 +200,12 @@ if __name__ == '__main__':
     encoder.eval()
 
     # Load word map (word2ix)
-    with open('D:\Vijay Code\Image Captioning\Show, Attend and tell\WORDMAP_GLOSYS.json', 'r') as j:
+    with open(data_folder + 'wordmap.json', 'r') as j:
         word_map = json.load(j)
     rev_word_map = {v: k for k, v in word_map.items()}  # ix2word
 
     # Encode, decode with attention and beam search
-    seq, alphas = caption_image_beam_search(encoder, decoder, 'D:\Vijay Code\Image Captioning\GlosysNet\\woman.jpg', word_map, args.beam_size)
+    seq, alphas = caption_image_beam_search(encoder, decoder, data_folder + 'woman.jpg', word_map, args.beam_size)
 
     # Visualize caption and attention of best sequence
     visualize_att(args.img, seq, alphas, rev_word_map,word_map, args.smooth)
