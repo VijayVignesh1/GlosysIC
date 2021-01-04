@@ -91,7 +91,6 @@ def caption_image_beam_search(encoder, decoder, image_path, word_map,adv_word_ma
         # Add
         scores = scores.float()
         scores = top_k_scores.expand_as(scores) + scores  # (s, vocab_size)
-        print("The Scores are after again\n", scores.shape)
 
         # For the first step, all k points will have the same scores (since same k previous words, h, c)
         if step == 1:
@@ -179,16 +178,13 @@ def visualize_att(image_path, seq, alphas, rev_word_map, smooth=True):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Show, Attend, and Tell - Tutorial - Generate Caption')
 
-    # parser.add_argument('--img', '-i', help='path to image')
-    # parser.add_argument('--model', '-m', help='path to model')
-    # parser.add_argument('--word_map', '-wm', help='path to word map JSON')
+    parser.add_argument('--image', '-i', help='path to image')
     parser.add_argument('--beam_size', '-b', default=5, type=int, help='beam size for beam search')
-    parser.add_argument('--dont_smooth', dest='smooth', action='store_false', help='do not smooth alpha overlay')
 
     args = parser.parse_args()
 
     # Load model
-    checkpoint = torch.load(data_folder + 'BEST_checkpoint.pth')
+    checkpoint = torch.load(checkpoint)
     decoder = checkpoint['decoder']
     decoder = decoder.to(device)
     decoder.eval()
@@ -202,7 +198,7 @@ if __name__ == '__main__':
     rev_word_map = {v: k for k, v in word_map.items()}  # ix2word
 
     # Encode, decode with attention and beam search
-    seq, alphas = caption_image_beam_search(encoder, decoder, data_folder + 'woman.jpg', word_map, args.beam_size)
+    seq, alphas = caption_image_beam_search(encoder, decoder, args.image, word_map, args.beam_size)
 
     # Visualize caption and attention of best sequence
     visualize_att(args.img, seq, alphas, rev_word_map,word_map, args.smooth)
