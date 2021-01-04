@@ -2,9 +2,9 @@ import torch
 from torch import nn
 import torchvision
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-
+# Data parameters
+data_folder = '/DL/GlosysIC/'  # folder with data files saved by create_input_files.py
+data_name = '_GLOSYS'  # base name shared by data files
 
 # Model parameters
 emb_dim = 512  # dimension of word embeddings
@@ -16,10 +16,10 @@ cudnn.benchmark = True  # set to true only if inputs to model are fixed size; ot
 
 # Training parameters
 start_epoch = 0
-epochs = 120  # number of epochs to train for (if early stopping is not triggered)
-epochs_since_improvement = 0  # keeps track of number of epochs since there's been an improvement in validation BLEU
+epochs = 10  # number of epochs to train for (if early stopping is not triggered)
+epochs_since_improvement = 4  # keeps track of number of epochs since there's been an improvement in validation BLEU
 batch_size = 32
-workers = 1  # for data-loading; right now, only 1 works with h5py
+workers = 0  # for data-loading; right now, only 1 works with h5py
 encoder_lr = 1e-4  # learning rate for encoder if fine-tuning
 decoder_lr = 4e-4  # learning rate for decoder
 grad_clip = 5.  # clip gradients at an absolute value of

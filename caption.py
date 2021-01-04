@@ -10,10 +10,7 @@ import skimage.transform
 import argparse
 from scipy.misc import imread, imresize
 from PIL import Image
-
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-data_folder = 'Image Captioning\Show, Attend and tell'  # folder with data files saved by create_input_files.py
+from base_model import *
 
 def caption_image_beam_search(encoder, decoder, image_path, word_map,adv_word_map, beam_size=3):
     """
