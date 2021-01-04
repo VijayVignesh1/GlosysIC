@@ -3,7 +3,7 @@ from torch import nn
 import torchvision
 
 # Data parameters
-data_folder = '/DL/GlosysIC/'  # folder with data files saved by create_input_files.py
+data_folder = 'GlosysIC/datasets/'  # folder with data files saved by create_input_files.py
 data_name = '_GLOSYS'  # base name shared by data files
 
 # Model parameters
